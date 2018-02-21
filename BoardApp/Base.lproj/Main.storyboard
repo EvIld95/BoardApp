@@ -55,7 +55,7 @@
                                                         <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oj-ha-yiI" customClass="GuardianMainButton" customModule="GuardianApp" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oj-ha-yiI">
                                                         <rect key="frame" x="30" y="120" width="275" height="50"/>
                                                         <color key="backgroundColor" red="0.91456967590000005" green="0.53195657009999997" blue="0.11207973559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="18"/>
@@ -67,6 +67,9 @@
                                                                 <color key="value" red="0.1569409668" green="0.15042370560000001" blue="0.036851800980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginButtonTappedWithSender:" destination="nYP-Na-cCg" eventType="touchUpInside" id="seK-x3-A8q"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -84,6 +87,9 @@
                                                 <state key="normal" title="Don't have account? Register here!">
                                                     <color key="titleColor" red="0.1569409668" green="0.15042370560000001" blue="0.036851800980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="dontHaveAccountButtonTappedWithSender:" destination="nYP-Na-cCg" eventType="touchUpInside" id="Jhs-nx-KZV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -107,6 +113,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="dontHaveAccountButton" destination="89l-V4-Wcy" id="jEw-qA-SXk"/>
+                        <outlet property="emailAddressTextField" destination="Apk-qV-u52" id="zTL-d5-kxl"/>
+                        <outlet property="loginButton" destination="1Oj-ha-yiI" id="XIi-3f-7bo"/>
+                        <outlet property="passwordTextField" destination="ugb-gN-egB" id="r5m-fv-Uce"/>
+                        <outlet property="stackView" destination="Uot-0q-6rC" id="Yup-KX-AHt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg9-AF-oZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

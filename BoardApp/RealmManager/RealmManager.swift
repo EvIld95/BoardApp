@@ -20,10 +20,8 @@ class RealmManager {
     
     func connectToRealmDatabase(username:String, password: String, register: Bool, viewControllerHandler: UIViewController!, completion: @escaping (_ user: SyncUser) -> ()) {
         SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: register), server: URL(string: serverAddress)!) { user, error in
+            
             guard let user = user else {
-                DispatchQueue.main.sync {
-                    MBProgressHUD.hide(for: viewControllerHandler.view, animated: true)
-                }
                 print(error?.localizedDescription as Any)
                 let alertController = UIAlertController(title: "Error!", message: "Problem with connection to database server", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -44,10 +42,10 @@ class RealmManager {
     
     private func connectToRealmPublicDatabase(viewControllerHandler: UIViewController!, mainUser: SyncUser, completion: @escaping (_ syncMainUser: SyncUser) -> ()) {
         SyncUser.logIn(with: .usernamePassword(username: "pablo@gmail.com", password: "qwerty", register: false), server: URL(string: serverAddress)!) { user, error in
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: viewControllerHandler.view, animated: true)
+            }
             guard let user = user else {
-                DispatchQueue.main.sync {
-                    MBProgressHUD.hide(for: viewControllerHandler.view, animated: true)
-                }
                 let alertController = UIAlertController(title: "Error!", message: error!.localizedDescription, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 viewControllerHandler.present(alertController, animated: true, completion: nil)
