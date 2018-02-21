@@ -56,12 +56,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(sender: UIButton!) {
         print("Touched")
-        MBProgressHUD.showAdded(to: self.view, animated: true)
+        //MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        RealmManager.sharedInstance.connectToRealmDatabase(username: emailAddressTextField.text!, password: passwordTextField.text!, register: !loginPage, viewControllerHandler: self) { (syncUser) in
-            print("Success")
+        //RealmManager.sharedInstance.connectToRealmDatabase(username: emailAddressTextField.text!, password: passwordTextField.text!, register: !loginPage, viewControllerHandler: self) { (syncUser) in
+            self.performSegue(withIdentifier: "successLogin", sender: nil)
             //self.performSegue(withIdentifier: "loggedInSuccess", sender: nil)
-        }
+        //}
         
         hideKeyboard()
     }

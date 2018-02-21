@@ -15,6 +15,7 @@
 		F7E8E8B7203D94E700B483DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E8E8B5203D94E700B483DE /* LaunchScreen.storyboard */; };
 		F7E8E8C0203DC23300B483DE /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E8E8BF203DC23300B483DE /* BackgroundView.swift */; };
 		F7E8E8C3203DC6C300B483DE /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E8E8C2203DC6C300B483DE /* RealmManager.swift */; };
+		F7E8E8C5203E094F00B483DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E8E8C4203E094F00B483DE /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F7E8E8B8203D94E700B483DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E8E8BF203DC23300B483DE /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		F7E8E8C2203DC6C300B483DE /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		F7E8E8C4203E094F00B483DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				F7E8E8B3203D94E700B483DE /* Assets.xcassets */,
 				F7E8E8B5203D94E700B483DE /* LaunchScreen.storyboard */,
 				F7E8E8B8203D94E700B483DE /* Info.plist */,
+				F7E8E8C4203E094F00B483DE /* MainViewController.swift */,
 			);
 			path = BoardApp;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -203,6 +207,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -253,6 +258,7 @@
 				F7E8E8C3203DC6C300B483DE /* RealmManager.swift in Sources */,
 				F7E8E8AF203D94E700B483DE /* LoginViewController.swift in Sources */,
 				F7E8E8AD203D94E700B483DE /* AppDelegate.swift in Sources */,
+				F7E8E8C5203E094F00B483DE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 276JFTHA68;
 				INFOPLIST_FILE = BoardApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawelszudrowicz.boardapp.BoardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 276JFTHA68;
 				INFOPLIST_FILE = BoardApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pawelszudrowicz.boardapp.BoardApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
